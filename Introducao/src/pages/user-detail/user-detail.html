@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ user?.name.first }} {{ user?.name.last }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card *ngIf="user">
+  <img [src]="user.picture.large"/>
+  <ion-card-content >
+    <ion-card-title>
+      {{ user.name.first }} {{ user.name.last }}
+      </ion-card-title>
+    <p>
+      {{ user.location.street }}
+    </p>
+    <p>
+      {{ user.location.state }} -
+      {{ user.location.city }}
+    </p> 
+    <p>
+      {{ user.cell }}
+      {{ user.email }}
+    </p>
+  </ion-card-content>
+</ion-card>
+</ion-content>
